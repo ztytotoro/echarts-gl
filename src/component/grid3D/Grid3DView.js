@@ -586,5 +586,6 @@ export default echarts.extendComponentView({
         this.groupGL.removeAll();
         this._control.dispose();
         this._axisLabelSurface.dispose();
+        this._axisPointerLabelsSurface.dispose();
     }
 });
