@@ -354,6 +354,11 @@ ZRTextureAtlasSurface.prototype = {
      */
     getCoords: function (id) {
         return this._coords[id];
+    },
+
+    dispose: function () {
+        this.clear();
+        this._zr.dispose();
     }
 };
 

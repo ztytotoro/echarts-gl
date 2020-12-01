@@ -23,6 +23,10 @@ function LabelsBuilder(width, height, api) {
     this._labelsMesh.material.set('textureAtlas', this._labelTextureSurface.getTexture());
 }
 
+LabelsBuilder.prototype.dispose = function () {
+    this._labelTextureSurface.dispose();
+}
+
 LabelsBuilder.prototype.getLabelPosition = function (dataIndex, positionDesc, distance) {
     return [0, 0, 0];
 };

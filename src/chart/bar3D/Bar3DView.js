@@ -317,5 +317,6 @@ export default echarts.extendChartView({
 
     dispose: function () {
         this.groupGL.removeAll();
+        this._labelsBuilder.dispose();
     }
 });
