@@ -38112,6 +38112,7 @@ var dimIndicesMap = {
         this.groupGL.removeAll();
         this._control.dispose();
         this._axisLabelSurface.dispose();
+        this._axisPointerLabelsSurface.dispose();
     }
 }));
 
@@ -39017,7 +39018,10 @@ var grid3DCreator = {
 
         ecModel.eachComponent('grid3D', function (grid3DModel) {
             // FIXME
-            grid3DModel.__viewGL = grid3DModel.__viewGL || new __WEBPACK_IMPORTED_MODULE_4__core_ViewGL__["a" /* default */]();
+            // if (grid3DModel.__viewGL) {
+            //     grid3DModel.__viewGL.dispose();
+            // }
+            grid3DModel.__viewGL = new __WEBPACK_IMPORTED_MODULE_4__core_ViewGL__["a" /* default */]();
 
             var cartesian3D = new __WEBPACK_IMPORTED_MODULE_0__grid3D_Cartesian3D__["a" /* default */]();
             cartesian3D.model = grid3DModel;
